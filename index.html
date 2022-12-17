@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="display" class="container mt-1">
+      <h3 class="text-center" id="border">
+        Production Live Display From Thermoforming
+      </h3>
+      <h4 class="text-center" id="border">
+        Date: <span id="date"><?php echo ?></span>| Shift:<span id="shift"> </span>
+      </h4>
+      <div class="row">
+        <div class="col-xl-6">
+          <h2 class="text-center mt-1" id="border-head">Machine</h2>
+          <h6 id="border">Cabinet Thermo-1 (COMI-1)</h6>
+          <h6 id="border">Cabinet Thermo-2 (COMI-2)</h6>
+          <h6 id="border">Cabinet Thermo-3 (KP-1)</h6>
+          <h6 id="border">Cabinet Thermo-4 (KP-2)</h6>
+          <h6 id="border">Cabinet Thermo-5 (ELITE)</h6>
+          <h6 id="border">Cabinet Thermo-6 (KCM)</h6>
+          <h6 id="border">Cabinet Thermo-7 (MM-1)</h6>
+          <h6 id="border">Cabinet Thermo-8 (MM-2)</h6>
+          <h6 id="border">Cabinet Thermo-9 (ASANO-2)</h6>
+          <h6 id="border">Cabinet Thermo-10 (ASANO-4)</h6>
+          <h6 id="border">Cabinet Thermo-11 (ASANO-5)</h6>
+          <h6 id="border">Cabinet Thermo-12 (KIEFEL-1)</h6>
+        </div>
+        <div class="col-xl-3 mt-1">
+          <h4 class="text-center" id="border">Total Production</h4>
+          <h6 class="text-center" id="border">700</h6>
+          <h6 class="text-center" id="border">750</h6>
+          <h6 class="text-center" id="border">740</h6>
+          <h6 class="text-center" id="border">730</h6>
+          <h6 class="text-center" id="border">720</h6>
+          <h6 class="text-center" id="border">720</h6>
+          <h6 class="text-center" id="border">720</h6>
+          <h6 class="text-center" id="border">720</h6>
+          <h6 class="text-center" id="border">720</h6>
+          <h6 class="text-center" id="border">720</h6>
+          <h6 class="text-center" id="border">720</h6>
+          <h6 class="text-center" id="border">720</h6>
+        </div>
+        <div class="col-xl-3 mt-1">
+          <h4 class="text-center" id="border">Production Plan</h4>
+          <h6 class="text-center" id="border">900</h6>
+          <h6 class="text-center" id="border">910</h6>
+          <h6 class="text-center" id="border">920</h6>
+          <h6 class="text-center" id="border">930</h6>
+          <h6 class="text-center" id="border">940</h6>
+          <h6 class="text-center" id="border">940</h6>
+          <h6 class="text-center" id="border">940</h6>
+          <h6 class="text-center" id="border">940</h6>
+          <h6 class="text-center" id="border">940</h6>
+          <h6 class="text-center" id="border">940</h6>
+          <h6 class="text-center" id="border">940</h6>
+          <h6 class="text-center" id="border">940</h6>
+        </div>
+      </div>
+
+
+      <script>
+        // document.getElementById('shift').innerHTML('formValue');
+        window.addEventListener('load',()=>{
+
+          const shift = localStorage.getItem('SHIFT');
+          const date = localStorage.getItem('DATE');
+
+          document.getElementById('date').innerHTML = shift;
+          document.getElementById('shift').innerHTML = date;
+        })
+      </script>
+      <!-- <script>
+        let value = document.getElementById('shift').value;
+        console.log(value); -->
+      </script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
